@@ -36,9 +36,49 @@
                 <div class="header__cta">
                     <a href="contact.html" class="btn btn-primary">Get Started</a>
                 </div>
+                <!-- Hamburger Menu Button (Mobile) -->
+                <button class="header__hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="header__hamburger-line"></span>
+                    <span class="header__hamburger-line"></span>
+                    <span class="header__hamburger-line"></span>
+                </button>
+            </nav>
+
+            <!-- Mobile Navigation -->
+            <nav class="header__mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+                <ul class="header__mobile-nav-list">
+                    <li><a href="index.html" class="header__mobile-nav-link">Home</a></li>
+                    <li><a href="services.html" class="header__mobile-nav-link">Services</a></li>
+                    <li><a href="contact.html"
+                            class="header__mobile-nav-link header__mobile-nav-link--active">Contact</a></li>
+                </ul>
+                <div class="header__mobile-cta">
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
             </nav>
         </div>
     </header>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburgerBtn.addEventListener('click', () => {
+            const isOpen = mobileNav.classList.toggle('is-open');
+            hamburgerBtn.classList.toggle('is-active');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburgerBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileNav.classList.remove('is-open');
+                hamburgerBtn.classList.remove('is-active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
 
     <!-- PAGE HERO -->
     <section class="page-hero">
