@@ -318,7 +318,7 @@ section {
   transition: all var(--duration-normal) var(--easing-standard);
 }
 
-.header__hamburger-line + .header__hamburger-line {
+.header__hamburger-line+.header__hamburger-line {
   margin-top: 4px;
 }
 
@@ -930,4 +930,89 @@ section {
 .error-page__text {
   color: var(--text-muted);
   margin-bottom: var(--space-xl);
+}
+
+/* ========================================
+   FOOTER SOCIAL LINKS
+   ======================================== */
+.footer__social {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin: var(--space-md) 0;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--text-muted);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.footer__social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__social-link:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 249, 4, 0.2);
+}
+
+.footer__social-link:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   CONTACT PAGE SOCIAL SECTION
+   ======================================== */
+.contact__social {
+  margin-top: var(--space-lg);
+}
+
+.contact__social-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-md);
+}
+
+.contact__social-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.contact__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text-muted);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.contact__social-link svg {
+  width: 22px;
+  height: 22px;
+}
+
+.contact__social-link:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 249, 4, 0.2);
 }

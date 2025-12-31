@@ -61,64 +61,8 @@
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header__inner">
-            <a href="index.html" aria-label="Rayavriti Home">
-                <img src="assets/images/logo/Lockup-color.svg" alt="Rayavriti" class="header__logo">
-            </a>
-
-            <nav class="header__nav" aria-label="Main navigation">
-                <ul class="header__nav-list">
-                    <li><a href="index.html" class="header__nav-link">Home</a></li>
-                    <li><a href="services.html" class="header__nav-link">Services</a></li>
-                    <li><a href="contact.html" class="header__nav-link">Contact</a></li>
-                </ul>
-                <div class="header__cta">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
-                </div>
-                <!-- Hamburger Menu Button (Mobile) -->
-                <button class="header__hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
-                    <span class="header__hamburger-line"></span>
-                    <span class="header__hamburger-line"></span>
-                    <span class="header__hamburger-line"></span>
-                </button>
-            </nav>
-
-            <!-- Mobile Navigation -->
-            <nav class="header__mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-                <ul class="header__mobile-nav-list">
-                    <li><a href="index.html" class="header__mobile-nav-link">Home</a></li>
-                    <li><a href="services.html" class="header__mobile-nav-link">Services</a></li>
-                    <li><a href="contact.html" class="header__mobile-nav-link">Contact</a></li>
-                </ul>
-                <div class="header__mobile-cta">
-                    <a href="contact.html" class="btn btn-primary">Get Started</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <script>
-        // Hamburger menu toggle
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileNav = document.getElementById('mobileNav');
-
-        hamburgerBtn.addEventListener('click', () => {
-            const isOpen = mobileNav.classList.toggle('is-open');
-            hamburgerBtn.classList.toggle('is-active');
-            hamburgerBtn.setAttribute('aria-expanded', isOpen);
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!hamburgerBtn.contains(e.target) && !mobileNav.contains(e.target)) {
-                mobileNav.classList.remove('is-open');
-                hamburgerBtn.classList.remove('is-active');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
-    </script>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- THANK YOU SECTION -->
     <section class="thank-you">
@@ -142,18 +86,11 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer__inner">
-            <img src="assets/images/icons/Icon-color.svg" alt="Rayavriti" class="footer__logo">
-            <p class="footer__tagline">
-                Engineering the infrastructure of tomorrow — reliable, secure, and built to scale.
-            </p>
-            <p class="footer__copyright">
-                © 2025 Rayavriti. All rights reserved.
-            </p>
-        </div>
-    </footer>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Components Loader -->
+    <script src="js/components.js"></script>
 
 </body>
 
