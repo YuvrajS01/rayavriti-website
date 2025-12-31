@@ -774,3 +774,39 @@ section {
 .header__nav-link--active {
   color: var(--text-primary);
 }
+
+/* ========================================
+   404 ERROR PAGE
+   ======================================== */
+.error-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.error-page__content {
+  max-width: 500px;
+}
+
+.error-page__code {
+  font-size: clamp(80px, 20vw, 160px);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-active) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.error-page__title {
+  margin-bottom: var(--space-md);
+}
+
+.error-page__text {
+  color: var(--text-muted);
+  margin-bottom: var(--space-xl);
+}

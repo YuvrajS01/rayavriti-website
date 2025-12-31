@@ -1,0 +1,11 @@
+# Rayavriti Website Robots.txt
+# https://rayavriti.com
+
+User-agent: *
+Allow: /
+
+# Exclude documentation
+Disallow: /docs/
+
+# Sitemap
+Sitemap: https://rayavriti.com/sitemap.xml
