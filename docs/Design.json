@@ -10,7 +10,7 @@
   "colors": {
     "brand": {
       "primary": {
-        "value": "#D3F904",
+        "value": "#d9fd3a",
         "description": "Electric green representing energy, speed, innovation"
       },
       "secondary": {
@@ -26,14 +26,14 @@
     },
 
     "text": {
-      "primary": { "value": "#D3F904" },
+      "primary": { "value": "#d9fd3a" },
       "secondary": { "value": "#A6B300" },
       "muted": { "value": "#6F6F5A" },
       "inverse": { "value": "#11110B" }
     },
 
     "state": {
-      "success": { "value": "#D3F904" },
+      "success": { "value": "#d9fd3a" },
       "warning": { "value": "#E6E600" },
       "error": { "value": "#FF4D4D" },
       "info": { "value": "#7AFF00" }
@@ -41,7 +41,7 @@
 
     "border": {
       "default": { "value": "#2A2A22" },
-      "active": { "value": "#D3F904" },
+      "active": { "value": "#d9fd3a" },
       "subtle": { "value": "#1F1F18" }
     }
   },
@@ -113,7 +113,7 @@
   "components": {
     "button": {
       "primary": {
-        "background": "#D3F904",
+        "background": "#d9fd3a",
         "text": "#11110B",
         "hover": {
           "background": "#C3E800",
@@ -125,8 +125,8 @@
       },
       "secondary": {
         "background": "transparent",
-        "text": "#D3F904",
-        "border": "#D3F904",
+        "text": "#d9fd3a",
+        "border": "#d9fd3a",
         "hover": {
           "background": "rgba(211, 249, 4, 0.1)"
         }
@@ -137,7 +137,7 @@
       "background": "#161612",
       "border": "#2A2A22",
       "hover": {
-        "border": "#D3F904",
+        "border": "#d9fd3a",
         "shadow": "soft"
       }
     },
@@ -145,9 +145,9 @@
     "input": {
       "background": "#11110B",
       "border": "#2A2A22",
-      "text": "#D3F904",
+      "text": "#d9fd3a",
       "focus": {
-        "border": "#D3F904",
+        "border": "#d9fd3a",
         "shadow": "glow"
       }
     }

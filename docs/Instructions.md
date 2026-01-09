@@ -22,7 +22,7 @@ Design Constraints (Strict)
 
 Background color: #11110B
 
-Primary accent color: #D3F904
+Primary accent color: #d9fd3a
 
 No gradients, no pastel colors, no illustrations
 

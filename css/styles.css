@@ -11,7 +11,7 @@
    ======================================== */
 :root {
   /* Brand Colors */
-  --primary: #D3F904;
+  --primary: #d9fd3a;
   --primary-hover: #C3E800;
   --primary-active: #B2D700;
 
@@ -21,14 +21,14 @@
   --bg-elevated: #1C1C16;
 
   /* Text Colors */
-  --text-primary: #D3F904;
+  --text-primary: #d9fd3a;
   --text-secondary: #A6B300;
   --text-muted: #6F6F5A;
   --text-inverse: #11110B;
 
   /* Border Colors */
   --border-default: #2A2A22;
-  --border-active: #D3F904;
+  --border-active: #d9fd3a;
   --border-subtle: #1F1F18;
 
   /* Typography */

@@ -33,7 +33,7 @@ This design system must feel suitable for:
 
 | Role      | Color     | Usage                                           |
 | --------- | --------- | ----------------------------------------------- |
-| Primary   | `#D3F904` | CTAs, highlights, active states, brand emphasis |
+| Primary   | `#d9fd3a` | CTAs, highlights, active states, brand emphasis |
 | Secondary | `#11110B` | Main background, foundation color               |
 
 **Design rule:**
@@ -57,7 +57,7 @@ Backgrounds should feel **layered but subtle**. Avoid visible gradients.
 
 | Role      | Color     | Notes                  |
 | --------- | --------- | ---------------------- |
-| Primary   | `#D3F904` | Headings, key text     |
+| Primary   | `#d9fd3a` | Headings, key text     |
 | Secondary | `#A6B300` | Subheadings            |
 | Muted     | `#6F6F5A` | Helper text, labels    |
 | Inverse   | `#11110B` | Text on green surfaces |
