@@ -1020,3 +1020,637 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(211, 249, 4, 0.2);
 }
+
+/* ========================================
+   ANIMATIONS - KEYFRAMES
+   ======================================== */
+
+/* Fade in with upward motion */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in with scale */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Shimmer effect for text */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Gentle pulse */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Grid pattern movement */
+@keyframes gridMove {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(60px);
+  }
+}
+
+/* Glow pulse for buttons */
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    box-shadow: var(--shadow-glow);
+  }
+
+  50% {
+    box-shadow: 0 0 32px rgba(217, 253, 58, 0.5);
+  }
+}
+
+/* Icon spin */
+@keyframes iconSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Line drawing animation */
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 100;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ========================================
+   HERO ANIMATIONS
+   ======================================== */
+
+/* Animated hero headline */
+.hero__headline {
+  animation: fadeInUp 0.8s var(--easing-emphasized) forwards;
+  opacity: 0;
+}
+
+/* Animated hero subtext */
+.hero__subtext {
+  animation: fadeInUp 0.8s var(--easing-emphasized) 0.15s forwards;
+  opacity: 0;
+}
+
+/* Animated hero CTA buttons */
+.hero__cta {
+  animation: fadeInUp 0.8s var(--easing-emphasized) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Animated background grid */
+.hero__pattern svg {
+  overflow: visible;
+}
+
+/* Hero pattern image styles */
+.hero__pattern-image {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  transform: translateY(-50%);
+  width: auto;
+  height: 90%;
+  max-height: 600px;
+  object-fit: contain;
+  opacity: 0.15;
+  animation: patternFloat 8s ease-in-out infinite;
+  filter: brightness(0.8);
+  pointer-events: none;
+}
+
+@keyframes patternFloat {
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(-10px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero__pattern-image {
+    right: -20%;
+    opacity: 0.1;
+  }
+}
+
+.hero__pattern-tiles {
+  animation: patternDrift 30s linear infinite;
+}
+
+.hero__pattern-accents rect {
+  animation: float 8s ease-in-out infinite;
+}
+
+.hero__pattern-accents rect:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.hero__pattern-accents rect:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.hero__pattern-accents rect:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.hero__pattern-accents rect:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes patternDrift {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  100% {
+    transform: translateX(-120px) translateY(-60px);
+  }
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATIONS
+   ======================================== */
+
+/* Base reveal class - starts hidden */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s var(--easing-emphasized),
+    transform 0.6s var(--easing-emphasized);
+}
+
+/* When element is visible */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal variations */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s var(--easing-emphasized),
+    transform 0.6s var(--easing-emphasized);
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s var(--easing-emphasized),
+    transform 0.6s var(--easing-emphasized);
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s var(--easing-emphasized),
+    transform 0.6s var(--easing-emphasized);
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays for grid items */
+.reveal-stagger>*:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.reveal-stagger>*:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.reveal-stagger>*:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.reveal-stagger>*:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.reveal-stagger>*:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.reveal-stagger>*:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+/* ========================================
+   ENHANCED BUTTON INTERACTIONS
+   ======================================== */
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--easing-standard),
+    box-shadow var(--duration-normal) var(--easing-standard);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  animation: none;
+}
+
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-normal) var(--easing-standard);
+}
+
+.btn-secondary:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   ENHANCED CARD INTERACTIONS
+   ======================================== */
+
+.about__card {
+  transition: all var(--duration-slow) var(--easing-emphasized);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.about__card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-active);
+  box-shadow:
+    var(--shadow-hard),
+    0 0 30px rgba(217, 253, 58, 0.15);
+}
+
+.about__card-icon {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.about__card:hover .about__card-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(217, 253, 58, 0.5));
+}
+
+/* Services items enhanced */
+.services__item {
+  transition: all var(--duration-slow) var(--easing-emphasized);
+}
+
+.services__item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    var(--shadow-soft),
+    0 0 20px rgba(217, 253, 58, 0.1);
+}
+
+.services__item-icon {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.services__item:hover .services__item-icon {
+  transform: scale(1.15);
+  color: var(--primary);
+  filter: drop-shadow(0 0 6px rgba(217, 253, 58, 0.4));
+}
+
+/* Service detail cards */
+.service-card {
+  transition: all var(--duration-slow) var(--easing-emphasized);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    var(--shadow-soft),
+    0 0 20px rgba(217, 253, 58, 0.1);
+}
+
+.service-card:hover .service-card__icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(217, 253, 58, 0.4));
+}
+
+.service-card__icon {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+/* Contact info cards */
+.contact__info-card {
+  transition: all var(--duration-slow) var(--easing-emphasized);
+}
+
+.contact__info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-soft);
+}
+
+.contact__info-icon {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.contact__info-card:hover .contact__info-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(217, 253, 58, 0.4));
+}
+
+/* ========================================
+   ENHANCED SOCIAL LINKS
+   ======================================== */
+
+.footer__social-link,
+.contact__social-link {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.footer__social-link:hover,
+.contact__social-link:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(217, 253, 58, 0.25);
+}
+
+.footer__social-link:hover svg,
+.contact__social-link:hover svg {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* ========================================
+   ENHANCED NAV LINKS
+   ======================================== */
+
+.header__nav-link {
+  position: relative;
+}
+
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--duration-normal) var(--easing-standard);
+}
+
+.header__nav-link:hover::after,
+.header__nav-link--active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========================================
+   FORM INPUT ANIMATIONS
+   ======================================== */
+
+.form-input {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.form-input:focus {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 3px rgba(217, 253, 58, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+  transition: color var(--duration-fast) var(--easing-standard);
+}
+
+.form-group:focus-within .form-label {
+  color: var(--primary);
+}
+
+/* ========================================
+   PAGE TRANSITION
+   ======================================== */
+
+body {
+  animation: fadeInUp 0.5s var(--easing-emphasized);
+}
+
+/* ========================================
+   FLOATING ELEMENTS (Decorative)
+   ======================================== */
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+  animation-delay: 1s;
+  animation-duration: 7s;
+}
+
+.floating-element:nth-child(3) {
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+/* ========================================
+   LOGO ANIMATION
+   ======================================== */
+
+.header__logo {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.header__logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(217, 253, 58, 0.3));
+}
+
+.footer__logo {
+  transition: all var(--duration-normal) var(--easing-standard);
+  animation: float 6s ease-in-out infinite;
+}
+
+.footer__logo:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(217, 253, 58, 0.4));
+}
+
+/* ========================================
+   CTA SECTION ANIMATION
+   ======================================== */
+
+.cta-section__title {
+  transition: all var(--duration-normal) var(--easing-standard);
+}
+
+.cta-section:hover .cta-section__title {
+  text-shadow: 0 0 20px rgba(217, 253, 58, 0.3);
+}
+
+/* ========================================
+   ACCESSIBILITY - REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__headline,
+  .hero__subtext,
+  .hero__cta {
+    opacity: 1;
+  }
+}
